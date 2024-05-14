@@ -92,11 +92,12 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
 
         btnCalculate.setOnClickListener{
-            calculateIMC()
+            val result = calculateIMC()
+            navigateToResult()
         }
     }
 
-    private fun calculateIMC(){
+    private fun calculateIMC():Double {
         val df = DecimalFormat("#.##")
         val imc = currentWeight / (currentHeight.toDouble()/100 * currentHeight.toDouble()/100)
         val result = df.format(imc).toDouble()

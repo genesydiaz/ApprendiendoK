@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ApprendiendoK"
         tools:targetApi="31">
         <activity
+            android:name=".imccalculator.ResultIMCActivity"
+            android:exported="false" />
+        <activity
             android:name=".imccalculator.ImcCalculatorActivity"
             android:exported="false">
             <meta-data
